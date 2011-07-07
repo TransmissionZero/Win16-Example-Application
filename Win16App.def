@@ -1,0 +1,9 @@
+NAME           Win16App
+DESCRIPTION    "Win16 Test Application"
+STUB           "WINSTUB.EXE"
+CODE           MOVEABLE PRELOAD DISCARDABLE
+DATA           MOVEABLE PRELOAD MULTIPLE
+HEAPSIZE       1024
+STACKSIZE      4096
+EXPORTS        MainWndProc
+               AboutDialogProc

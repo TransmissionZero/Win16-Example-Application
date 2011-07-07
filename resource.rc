@@ -1,0 +1,35 @@
+#include <windows.h>
+#include "resource.h"
+
+// Win16 application icon.
+IDI_APPICON ICON DISCARDABLE                    "App.ico"
+
+// Our main menu.
+IDR_MAINMENU MENU DISCARDABLE
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About",                      ID_HELP_ABOUT
+    END
+END
+
+// Our "about" dialog.
+IDD_ABOUTDIALOG DIALOG DISCARDABLE 0, 0, 147, 67
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+BEGIN
+    ICON            IDI_APPICON,IDC_STATIC,7,7,20,20
+    LTEXT           "Win16 Test Application.",IDC_STATIC,34,7,86,8
+    LTEXT           "©2011 Martin Payne",IDC_STATIC,34,17,68,8
+    DEFPUSHBUTTON   "OK",IDOK,90,46,50,14,WS_GROUP
+END
+
+// Our accelerators.
+IDR_ACCELERATOR ACCELERATORS DISCARDABLE
+BEGIN
+    "A",            ID_HELP_ABOUT,          VIRTKEY, ALT, NOINVERT
+END

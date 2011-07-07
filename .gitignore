@@ -1,0 +1,5 @@
+# Ignore compiled binaries
+*.exe
+*.map
+*.obj
+*.res
