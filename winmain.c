@@ -1,6 +1,6 @@
 #include <windows.h>
 #include "resource.h"
-#include "callbacks.h"
+#include "callback.h"
 
 // Our application entry point.
 int PASCAL WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
