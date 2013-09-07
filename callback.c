@@ -11,7 +11,7 @@ LRESULT CALLBACK MainWndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
   {
     case WM_COMMAND:
     {
-      switch (LOWORD(wParam))
+      switch (wParam)
       {
         case ID_HELP_ABOUT:
         {
@@ -39,7 +39,7 @@ LRESULT CALLBACK MainWndProc(HWND hWnd, UINT msg, WPARAM wParam, LPARAM lParam)
 
     case WM_SYSCOMMAND:
     {
-      switch (LOWORD(wParam))
+      switch (wParam)
       {
         case ID_HELP_ABOUT:
         {
@@ -81,12 +81,12 @@ BOOL CALLBACK AboutDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lPa
   {
     case WM_COMMAND:
     {
-      switch (LOWORD(wParam))
+      switch (wParam)
       {
         case IDOK:
         case IDCANCEL:
         {
-          EndDialog(hwndDlg, LOWORD(wParam));
+          EndDialog(hwndDlg, wParam);
           return TRUE;
         }
       }

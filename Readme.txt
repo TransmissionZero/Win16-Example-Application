@@ -43,6 +43,10 @@ sending any questions.
 
 Changelog
 
+2013–09-07: Version 1.2
+
+  • Removed superfluous LOWORD() macros which had been applied to WPARAMs.
+
 2013–08–26: Version 1.1
 
   • Added a VERSIONINFO resource to the executable, so that version information
@@ -55,4 +59,4 @@ Changelog
   • First release.
 
 Martin Payne
-2013–08–26
+2013–09-07
