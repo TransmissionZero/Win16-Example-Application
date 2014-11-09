@@ -6,8 +6,8 @@ VpeMain
 WRect
 0
 0
-7680
-9134
+10276
+9979
 2
 MProject
 3
@@ -30,8 +30,8 @@ VComponent
 WRect
 0
 0
-2499
-7379
+1737
+8798
 0
 0
 9
@@ -39,5 +39,5 @@ WFileName
 12
 Win16App.tgt
 0
-0
+10
 7

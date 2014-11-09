@@ -2,10 +2,10 @@
 #include <ver.h>
 #include "resource.h"
 
-// Win16 application icon.
+/* Win16 application icon */
 IDI_APPICON ICON DISCARDABLE           "App.ico"
 
-// Our main menu.
+/* Our main menu */
 IDR_MAINMENU MENU DISCARDABLE
 BEGIN
   POPUP "&File"
@@ -18,8 +18,8 @@ BEGIN
   END
 END
 
-// Executable version information.
-VS_VERSION_INFO    VERSIONINFO
+/* Executable version information */
+VS_VERSION_INFO    VERSIONINFO DISCARDABLE
 FILEVERSION        1,0,0,0
 PRODUCTVERSION     1,0,0,0
 FILEFLAGSMASK      VS_FFI_FILEFLAGSMASK
@@ -35,36 +35,36 @@ BEGIN
   BLOCK "StringFileInfo"
   BEGIN
     BLOCK "080904E4"
-    BEGIN 
-      VALUE "CompanyName",     "Transmission Zero\0"
-      VALUE "FileDescription", "Win16 Test Application\0"
-      VALUE "FileVersion",     "1.0.0.0\0"
-      VALUE "InternalName",    "Win16App\0"
-      VALUE "LegalCopyright",  "©2013 Transmission Zero\0"
-      VALUE "OriginalFilename","Win16App.exe\0"
-      VALUE "ProductName",     "Win16 Test Application\0"
-      VALUE "ProductVersion",  "1.0.0.0\0"
+    BEGIN
+      VALUE "CompanyName", "Transmission Zero\0"
+      VALUE "FileDescription", "Win16 Example application\0"
+      VALUE "FileVersion", "1.0.0.0\0"
+      VALUE "InternalName", "Win16App\0"
+      VALUE "LegalCopyright", "©2014 Transmission Zero\0"
+      VALUE "OriginalFilename", "Win16App.exe\0"
+      VALUE "ProductName", "Win16 Test application\0"
+      VALUE "ProductVersion", "1.0.0.0\0"
     END
   END
-  BLOCK "VarFileInfo" 
-  BEGIN 
+  BLOCK "VarFileInfo"
+  BEGIN
     VALUE "Translation", 0x809, 1252
   END
 END
 
-// Our "about" dialog.
+/* Our "about" dialog */
 IDD_ABOUTDIALOG DIALOG DISCARDABLE 0, 0, 147, 67
 STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
 CAPTION "About"
 FONT 8, "MS Sans Serif"
 BEGIN
   ICON             IDI_APPICON,IDC_STATIC,7,7,20,20
-  LTEXT            "Win16 Test Application.",IDC_STATIC,34,7,86,8
-  LTEXT            "©2013 Transmission Zero",IDC_STATIC,34,17,86,8
+  LTEXT            "Win16 Example application.",IDC_STATIC,34,7,91,8
+  LTEXT            "©2014 Transmission Zero",IDC_STATIC,34,17,86,8
   DEFPUSHBUTTON    "OK",IDOK,90,46,50,14,WS_GROUP
 END
 
-// Our accelerators.
+/* Our accelerators */
 IDR_ACCELERATOR ACCELERATORS DISCARDABLE
 BEGIN
   "A",             ID_HELP_ABOUT,      VIRTKEY, ALT, NOINVERT
