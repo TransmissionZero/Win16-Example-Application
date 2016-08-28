@@ -3,6 +3,7 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
+- [Building the Application](#building-the-application)
 - [Terms of Use](#terms-of-use)
 - [Known Problems](#known-problems)
 - [Changelog](#changelog)
@@ -14,11 +15,20 @@ accompanies the
 [Building Win16 GUI Applications in C](http://www.transmissionzero.co.uk/computing/win16-apps-in-c/)
 article on [Transmission Zero](http://www.transmissionzero.co.uk/).
 
-To build the application with Microsoft's Visual C++ compilers, open a command
-prompt, change to the directory containing the Makefile, and run "nmake". Note
-that you will need the 16 bit C compiler, linker, and resource compiler--this
-won't work with 32 bit compilers! Also note that the Makefile may require some
-small modifications if you use a make utility other than "nmake".
+The application runs under Windows 3.0 to Windows ME, and all versions of
+Windows NT which support Win16 apps (Windows NT 3.1 to at least the x86 version
+of Windows 10). It does not run under Windows 1 or 2, but there is a
+[Windows 1 Version](https://github.com/TransmissionZero/Windows-1-Example-Application)
+which is compatible with Windows 1 and 2 (but not compatible with Windows 9x).
+
+## Building the Application
+
+To build the application from the command line with Microsoft's Visual C++
+compilers, open a command prompt, change to the directory containing the
+Makefile, and run "nmake". Note that you will need the 16 bit C compiler,
+linker, and resource compiler--this won't work with 32 bit compilers! Also note
+that the Makefile may require some small modifications if you use a make utility
+other than "nmake".
 
 To build the application with the Microsoft Visual C++ GUI, open the
 "Win16App.mak" file and build the application. You will need a version of Visual
@@ -26,8 +36,8 @@ C++ which supports building Win16 apps, for example Visual C++ 1.52 (available
 from [MSDN](https://msdn.microsoft.com/subscriptions/downloads) if you have a
 subscription).
 
-To build the application in Open Watcom, open the project up in the IDE, and
-choose the "Make" option from the "Targets" menu.
+To build the application in [Open Watcom](http://openwatcom.org/), open the
+project up in the IDE, and choose the "Make" option from the "Targets" menu.
 
 ## Terms of Use
 
@@ -35,18 +45,13 @@ Refer to "License.txt" for terms of use.
 
 ## Known Problems
 
-There is also a Windows 1 version of this application. If you try to launch this
-application while the Windows 1 version is already running, you get a second
-instance of the Windows 1 application instead! I can't find any reason why this
-would happen, but I've tested the application on Windows 3.0 to Windows 8.1, and
-it behaves the same across all of them.
-
 The Open Watcom build of the application doesn't work correctly under Windows
-3.0 when running in real mode. The application will start but the menu is
+3.0 when running in Real Mode. The application will start but the menu is
 missing and the about dialog won't display. I've found Open Watcom to be a bit
 hit and miss, where certain seemingly harmless changes of compiler option result
 in an application which crashes, so it may be possible to fix this by changing
-the compiler options.
+the compiler options. It runs fine under Windows 3.0 in Standard Mode and 386
+Enhanced Mode.
 
 If you have any other problems or questions, please ensure you have read this
 readme file and the
@@ -73,4 +78,4 @@ article. If you are still having trouble, you can
   - First release.
 
 Transmission Zero
-2016-08-27
+2016-08-28
