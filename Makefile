@@ -15,7 +15,10 @@ Win16App.exe:
 	$(RC) /nologo /30 Resource.res Win16App.exe
 
 clean:
-	@del *.obj *.res *.map Win16App.exe 2> NUL
+	if exist *.obj         del *.obj
+	if exist *.res         del *.res
+	if exist *.map         del *.map
+	if exist Win16App.exe  del Win16App.exe
 
 %.obj:
 	$(CC) $(CFLAGS) $<
