@@ -7,4 +7,3 @@ HEAPSIZE       1024
 STACKSIZE      4096
 EXPORTS        MainWndProc
                AboutDialogProc
-           
