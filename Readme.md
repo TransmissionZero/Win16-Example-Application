@@ -10,7 +10,7 @@
 
 ## Introduction
 
-This application is an example 16 bit Windows application written in C. It
+This application is an example 16 bit Windows application written in C. It
 accompanies the
 [Building Win16 GUI Applications in C](http://www.transmissionzero.co.uk/computing/win16-apps-in-c/)
 article on [Transmission Zero](http://www.transmissionzero.co.uk/).
@@ -24,17 +24,16 @@ which is compatible with Windows 1 and 2 (but not compatible with Windows 9x).
 ## Building the Application
 
 To build the application from the command line with Microsoft's Visual C++
-compilers, open a command prompt, change to the directory containing the
-Makefile, and run "nmake". Note that you will need the 16 bit C compiler,
-linker, and resource compiler--this won't work with 32 bit compilers! Also note
-that the Makefile may require some small modifications if you use a make utility
-other than "nmake".
+16 bit compilers, open a command prompt, change to the directory containing the
+project files, and run "nmake /f Win16App.mak". Note that you will need the 16
+bit C compiler, linker, and resource compiler--this won't work with 32 bit
+compilers! The 16 bit tools can be freely downloaded as part of the
+[Windows Server 2003 DDK](http://download.microsoft.com/download/9/0/f/90f019ac-8243-48d3-91cf-81fc4093ecfd/1830_usa_ddk.iso).
 
-To build the application with the Microsoft Visual C++ GUI, open the
-"Win16App.mak" file and build the application. You will need a version of Visual
-C++ which supports building Win16 apps, for example Visual C++ 1.52 (available
-from [MSDN](https://msdn.microsoft.com/subscriptions/downloads) if you have a
-subscription).
+To build the application with the Microsoft Visual 1.5 C++ GUI, open the
+"Win16App.mak" file and build the application. If you have an MSDN subscription,
+you can
+[download Visual C++ 1.52](https://my.visualstudio.com/Downloads?pid=140).
 
 To build the application in [Open Watcom](http://openwatcom.org/), open the
 project up in the IDE, and choose the "Make" option from the "Targets" menu.
@@ -52,6 +51,9 @@ hit and miss, where certain seemingly harmless changes of compiler option result
 in an application which crashes, so it may be possible to fix this by changing
 the compiler options. It runs fine under Windows 3.0 in Standard Mode and 386
 Enhanced Mode.
+
+The Open Watcom build of the application has optimisations switched off. With
+optimisations, the application crashes on startup.
 
 If you have any other problems or questions, please ensure you have read this
 readme file and the
