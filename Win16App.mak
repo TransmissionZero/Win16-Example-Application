@@ -10,7 +10,7 @@ D_RCDEFINES = /d_DEBUG
 R_RCDEFINES = /dNDEBUG 
 ORIGIN = MSVC
 ORIGIN_VER = 1.00
-PROJPATH =
+PROJPATH = 
 USEMFC = 0
 CC = cl
 CPP = cl
@@ -22,12 +22,12 @@ CPPUSEPCHFLAG =
 FIRSTC = ABOUTDLG.C  
 FIRSTCPP =             
 RC = rc
-CFLAGS_D_WEXE = /nologo /W3 /Gf /Zi /AM /Od /D "WINVER"="0x0300" /D "_DEBUG" /FR /Gw /Fd"WIN16APP.PDB"
-CFLAGS_R_WEXE = /nologo /W3 /Gf /AM /O1 /D "WINVER"="0x0300" /D "NDEBUG" /FR /Gw 
+CFLAGS_D_WEXE = /nologo /W3 /Gf /Zi /Od /D "WINVER"="0x0300" /D "_DEBUG" /FR /Gw /Fd"WIN16APP.PDB"
+CFLAGS_R_WEXE = /nologo /W3 /Gf /O1 /D "WINVER"="0x0300" /D "NDEBUG" /FR /Gw 
 LFLAGS_D_WEXE = /NOLOGO /NOD /PACKC:61440 /ALIGN:16 /ONERROR:NOEXE /CO  
 LFLAGS_R_WEXE = /NOLOGO /NOD /PACKC:61440 /ALIGN:16 /ONERROR:NOEXE  
-LIBS_D_WEXE = oldnames libw mlibcew commdlg.lib olecli.lib olesvr.lib shell.lib 
-LIBS_R_WEXE = oldnames libw mlibcew commdlg.lib olecli.lib olesvr.lib shell.lib 
+LIBS_D_WEXE = oldnames libw slibcew commdlg.lib olecli.lib olesvr.lib shell.lib 
+LIBS_R_WEXE = oldnames libw slibcew commdlg.lib olecli.lib olesvr.lib shell.lib 
 RCFLAGS = /nologo 
 RESFLAGS = /nologo /30 
 RUNFLAGS = 
