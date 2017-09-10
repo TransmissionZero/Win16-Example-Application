@@ -1,6 +1,6 @@
-#include "aboutdlg.h"
-#include "resource.h"
-#include "globals.h"
+#include "AboutDlg.h"
+#include "Globals.h"
+#include "Resource.h"
 
 /* Dialog procedure for our "about" dialog */
 BOOL CALLBACK AboutDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
@@ -24,7 +24,9 @@ BOOL CALLBACK AboutDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lPa
     }
 
     case WM_INITDIALOG:
+    {
       return TRUE;
+    }
   }
 
   return FALSE;

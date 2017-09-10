@@ -55,23 +55,23 @@ SBRS = ABOUTDLG.SBR \
 
 
 ABOUTDLG_DEP = aboutdlg.h \
-	resource.h \
-	globals.h
+	globals.h \
+	resource.h
 
 
-MAINWND_DEP = mainwnd.h \
-	aboutdlg.h \
-	resource.h \
-	globals.h
+MAINWND_DEP = aboutdlg.h \
+	globals.h \
+	mainwnd.h \
+	resource.h
 
 
 RESOURCE_RCDEP = resource.h \
 	app.ico
 
 
-WINMAIN_DEP = mainwnd.h \
-	resource.h \
-	globals.h
+WINMAIN_DEP = globals.h \
+	mainwnd.h \
+	resource.h
 
 
 all:	$(PROJ).EXE $(PROJ).BSC
