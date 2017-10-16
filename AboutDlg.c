@@ -35,11 +35,5 @@ BOOL CALLBACK AboutDialogProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPARAM lPa
 /* Show our "about" dialog */
 void ShowAboutDialog(HWND owner)
 {
-  /* Create dialog callback thunk */
-  FARPROC aboutProc = MakeProcInstance(&AboutDialogProc, g_hInstance);
-
-  DialogBox(g_hInstance, MAKEINTRESOURCE(IDD_ABOUTDIALOG), owner, aboutProc);
-
-  /* Free dialog callback thunk */
-  FreeProcInstance(aboutProc);
+  DialogBox(g_hInstance, MAKEINTRESOURCE(IDD_ABOUTDIALOG), owner, &AboutDialogProc);
 }

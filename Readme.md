@@ -4,6 +4,7 @@
 
 - [Introduction](#introduction)
 - [Building the Application](#building-the-application)
+- [Smart Callbacks](#smart-callbacks)
 - [Terms of Use](#terms-of-use)
 - [Known Problems](#known-problems)
 - [Changelog](#changelog)
@@ -61,6 +62,23 @@ To build the application in [Open Watcom](http://openwatcom.org/), open the
 project up in the IDE, and choose the "Make" option from the "Targets" menu. You
 can switch between debug and release builds by going to "Targets", "Target
 Options", and choosing "Use Development Switches" or "Use Release Switches".
+
+## Smart Callbacks
+
+This application makes use of so-called "smart callbacks". This means the data segment register is loaded from the
+stack segment register on entry to any callback function which is called by Windows. The result of this is that it is
+not necessary to list the callback functions in the application's module definition file, and it is not necessary to use
+"MakeProcInstance" to create a thunk when (e.g.) displaying a dialog box. In Visual C++ this is achieved by marking
+callback functions with the "__export" modifier, and using the "/GA /GEs /GEm" compiler options (optimise far function
+epilogs, load DS from SS, and increment BP on entry to the callback--required only for real mode stack walking support).
+You can also use the "/GEf" option, which means all far functions are given the code to load DS from SS regardless of
+whether they are callback functions. This is slightly less efficient, but does mean that callback functions don't
+require the "__export" modifier.
+
+Open Watcom does the same thing, but uses the "-zWs" compiler option to include the segment loading code.
+
+Refer to the [Windows 1 Version](https://github.com/TransmissionZero/Windows-1-Example-Application) for an example
+application which uses "MakeProcInstance" rather than smart callbacks.
 
 ## Terms of Use
 
