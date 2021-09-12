@@ -21,7 +21,7 @@
 // Icon
 //
 
-IDI_APPICON             ICON    DISCARDABLE     "APP.ICO"
+IDI_APPICON             ICON    DISCARDABLE     "App.ico"
 
 //////////////////////////////////////////////////////////////////////////////
 //
