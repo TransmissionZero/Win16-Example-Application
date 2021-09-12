@@ -1,0 +1,6 @@
+name = Win16App
+rname = Resource
+LNK = $(name).lnk
+OBJS = AboutDlg.obj MainWnd.obj WinMain.obj
+resources = App.ico
+lnk_dependencies = makefile Win16App.mif master.mif
